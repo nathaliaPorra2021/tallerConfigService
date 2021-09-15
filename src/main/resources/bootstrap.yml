@@ -1,0 +1,16 @@
+server:
+  port: 8081
+
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/nathaliaPorra2021/remote-server-properties.git
+          username: ${GIT_USER}
+          password: ${GIT_PASSWORD}
+          default-label: "master"
+  security:
+    user:
+      name: ${CONFIG_USER}
+      password: ${CONFIG_PASSWORD}
